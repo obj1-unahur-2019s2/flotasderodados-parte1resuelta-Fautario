@@ -1,0 +1,29 @@
+import dependencias.*
+import vehiculos.*
+
+test "Dependencia Deportes" {
+	var cachito = new ChevroletCorsa(color = rojo)
+	var deportes = new Dependencia(cantidadDeEmpleados = 45)
+	var corsa1 = new ChevroletCorsa(color = azul)
+	var corsa2 = new ChevroletCorsa(color = verde)
+	var kwid1 = new RenaultKwid(tieneTanqueAdicional = true)
+	var especial1 = new AutoEspecial(color = beige, capacidad = 5, velocidadMaxima = 160, peso = 1200)
+	var cultura = new Dependencia(cantidadDeEmpleados = 31)
+	var kwid2 = new RenaultKwid(tieneTanqueAdicional = true)
+	var kwid3 = new RenaultKwid(tieneTanqueAdicional = true)
+	var kwid4 = new RenaultKwid(tieneTanqueAdicional = false)
+	
+	deportes.agregarAFlota(cachito)
+	deportes.agregarAFlota(corsa1)
+	deportes.agregarAFlota(corsa2)
+	deportes.agregarAFlota(kwid1)
+	deportes.agregarAFlota(especial1)
+	
+	cultura.agregarAFlota(cachito)
+	cultura.agregarAFlota(kwid2)
+	cultura.agregarAFlota(kwid3)
+	cultura.agregarAFlota(kwid4)
+	
+	assert.that(true)
+	
+}
